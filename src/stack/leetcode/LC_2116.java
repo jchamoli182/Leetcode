@@ -14,6 +14,9 @@ public class LC_2116 {
     }
 
     public boolean Solve(){
+       
+        if(s.length() % 2 != 0) return false;
+
         Stack<Integer> open = new Stack<>();
         Stack<Integer> openClose = new Stack<>();
     
