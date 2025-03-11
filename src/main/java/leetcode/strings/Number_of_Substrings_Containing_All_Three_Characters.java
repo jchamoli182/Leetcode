@@ -3,6 +3,9 @@ package leetcode.strings;
 public class Number_of_Substrings_Containing_All_Three_Characters {
     
     public static void main(String[] args) {
+
+        // time complexity O(n)
+        // space complexity O(1)
         String s = "abcabc";
         int n = s.length();
 
