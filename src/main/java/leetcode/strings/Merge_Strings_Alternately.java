@@ -30,5 +30,6 @@ public class Merge_Strings_Alternately {
         }
 
         System.out.println(sb.toString());
+
     }
 }
