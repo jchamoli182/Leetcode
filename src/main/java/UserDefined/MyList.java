@@ -15,7 +15,7 @@ public class MyList {
         //check if size is equal to capacity because no more element can be addded,increase the size of the list.
         if(size == n){
             n = 2 * n; //double the capacity.
-            arr = Copy(arr,n).clone();
+            arr = Copy(arr,n);
         }
         arr[ptr] = x;
         ptr++;
@@ -23,27 +23,18 @@ public class MyList {
     }
     //get the element at particular index.
     public int get(int idx){
-        if(idx >= size){
+        if(idx >= size || idx < 0){
             return -1;   //if index is out of bound return -1;
         }
-
-        for(int i=0;i<size;i++){
-            if(i == idx) return arr[i];
-        }
-        return -1;
+        return arr[idx];
     }
 
     //replace an element at particular index
     public void replace(int idx,int x){
-        if(idx >= size){
+        if(idx >= size || idx < 0){
             return;   //if index is out of bound return empty;
-        }
-        for(int i=0;i<size;i++){
-            if(i == idx){
-                arr[i] = x;
-                break;
-            }
-        }    
+        }  
+        arr[idx] = x;
     }
     //remove at specific index.
     public void remove(int idx){
